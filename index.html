@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scratch & Win</title>
+</head>
+<body style="text-align:center; font-family:Arial">
+
+<h1>🎉 Scratch & Win Game 🎉</h1>
+<p>Scratch below and try your luck!</p>
+
+<button onclick="win()">SCRATCH</button>
+
+<h2 id="result"></h2>
+
+<script>
+function win(){
+  let arr = ["🎁 You Won ₹50", "😢 Better luck next time", "🎉 You Won ₹100"];
+  document.getElementById("result").innerHTML =
+  arr[Math.floor(Math.random()*arr.length)];
+}
+</script>
+
+</body>
+</html>
