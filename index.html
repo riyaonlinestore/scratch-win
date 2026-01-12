@@ -16,6 +16,7 @@
 function win(){
   let arr = ["🎁 You Won ₹50", "😢 Better luck next time", "🎉 You Won ₹100"];
   document.getElementById("result").innerHTML =
+    document.getElementById("claimBox").style.display = "block";
   arr[Math.floor(Math.random()*arr.length)];
 }
 </script>
