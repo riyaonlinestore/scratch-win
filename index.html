@@ -4,22 +4,21 @@
   <title>Scratch & Win</title>
 </head>
 <body style="text-align:center; font-family:Arial">
-
-<h1>🎉 Scratch & Win Game 🎉</h1>
-<p>Scratch below and try your luck!</p>
-
-<button onclick="win()">SCRATCH</button>
-
-<h2 id="result"></h2>
+  <!-- CLAIM BUTTON SYSTEM -->
+<div id="claimBox" style="display:none; text-align:center; margin-top:20px;">
+  <a href="claim.html">
+    <button style="padding:12px 30px; background:#00a000; color:white; border:none; border-radius:6px; font-size:18px;">
+      Claim Now
+    </button>
+  </a>
+</div>
 
 <script>
-function win(){
-  let arr = ["🎁 You Won ₹50", "😢 Better luck next time", "🎉 You Won ₹100"];
-  document.getElementById("result").innerHTML =
-    document.getElementById("claimBox").style.display = "block";
-  arr[Math.floor(Math.random()*arr.length)];
+const oldScratch = scratch;  
+scratch = function () {
+  oldScratch();
+  document.getElementById("claimBox").style.display = "block";
 }
 </script>
-
 </body>
 </html>
