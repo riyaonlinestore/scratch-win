@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Scratch & Win</title>
+  <title>Scratch & Win (Demo)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{font-family:Arial;text-align:center;padding:20px}
+    button{padding:10px 18px;font-size:16px;border-radius:6px;border:none}
+    #scratchBtn{background:#ddd}
+    #claimBtn{background:#00a000;color:#fff;display:none;margin-top:12px}
+    #note{color:#777;font-size:12px;margin-top:10px}
+  </style>
 </head>
-<body style="text-align:center; font-family:Arial">
-  <!-- CLAIM BUTTON SYSTEM -->
-<div id="claimBox" style="display:none; text-align:center; margin-top:20px;">
+<body>
+
+  <h2>🎉 Scratch & Win Game (Demo)</h2>
+  <p>Scratch below and try your luck!</p>
+
+  <button id="scratchBtn" onclick="doScratch()">SCRATCH</button>
+
+  <h3 id="result"></h3>
+
   <a href="claim.html">
-    <button style="padding:12px 30px; background:#00a000; color:white; border:none; border-radius:6px; font-size:18px;">
-      Claim Now
-    </button>
+    <button id="claimBtn">Claim (Demo)</button>
   </a>
-</div>
+
+  <p id="note">*This is a demo project for learning purposes only.</p>
 
 <script>
-const oldScratch = scratch;  
-scratch = function () {
-  oldScratch();
-  document.getElementById("claimBox").style.display = "block";
-}
+  function doScratch(){
+    // Demo random amount
+    var prizes = [50, 100, 20, 10];
+    var win = prizes[Math.floor(Math.random()*prizes.length)];
+    document.getElementById("result").innerText = "🎁 You Won ₹" + win + " (Demo)";
+    document.getElementById("claimBtn").style.display = "inline-block";
+  }
 </script>
+
 </body>
 </html>
