@@ -14,7 +14,7 @@
 <body>
 
 <h2>🎉 Scratch & Win Game (Demo)</h2>
-  <p id="liveCount" style="color:green; font-weight:bold;">
+  <p id="liveCount" style="color:green; font-weight:bold; display:block;">
   🔴 <span id="visitors"></span> People are playing now!
   </p>
 <p>Scratch below and try your luck!</p>
@@ -29,6 +29,7 @@
 <a href="claim.html">
   <button id="claimBtn">Claim (Demo)</button>
 </a>
+  document.getElementById("liveCount").style.display = "block";
 
 <script>
 function doScratch() {
