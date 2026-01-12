@@ -53,6 +53,10 @@ document.getElementById("shareBtn").onclick = function(){
 }
   // Live Visitor Counter (Demo)
 var count = Math.floor(Math.random() * 50) + 20;
+
+// 👉 Initial value set (IMPORTANT)
+document.getElementById("visitors").innerText = count;
+
 setInterval(function () {
   count += Math.floor(Math.random() * 3) - 1;
   if (count < 20) count = 20;
