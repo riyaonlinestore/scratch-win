@@ -19,6 +19,9 @@
 <button id="scratchBtn" onclick="doScratch()">SCRATCH</button>
 
 <h3 id="result"></h3>
+  <button id="shareBtn" style="display:none; margin-top:15px; padding:12px 25px; background:#25D366; color:white; border:none; border-radius:6px; font-size:16px;">
+  Share on WhatsApp
+  </button>
 
 <a href="claim.html">
   <button id="claimBtn">Claim (Demo)</button>
@@ -33,6 +36,12 @@ function doScratch() {
   document.getElementById("claimBtn").style.display = "inline-block";
 
   // CONFETTI 🎉
+  document.getElementById("shareBtn").style.display = "inline-block";
+
+document.getElementById("shareBtn").onclick = function(){
+  var msg = "I just won ₹" + win + " on this Scratch & Win Game 😍 Try your luck here 👉 https://yaonlinestore.github.io";
+  window.open("https://wa.me/?text=" + encodeURIComponent(msg));
+}
   confetti({
     particleCount: 150,
     spread: 90,
