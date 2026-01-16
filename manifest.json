@@ -1,0 +1,15 @@
+{
+  "name": "Win Exciting Prizes",
+  "short_name": "Win Prizes",
+  "start_url": "/scratch-win/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff9800",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/263/263142.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
