@@ -2,28 +2,31 @@
 <html>
 <head>
   <title>Scratch & Win</title>
+
+  <!-- ✅ Adsterra script -->
+  <script src="https://pl29008142.profitablecpmratenetwork.com/23/c0/d9/23c0d9c59bb2e634cb9f66d22e11eb43.js"></script>
+
 </head>
-<body style="text-align:center; font-family:Arial">
+
+<body style="text-align:center; font-family:Arial; background:#f2f2f2">
 
 <h1>🎉 Scratch & Win Game 🎉</h1>
-<p>Scratch below and try your luck!</p>
+<p>Click below and try your luck!</p>
 
-<button onclick="win()">SCRATCH</button>
+<button onclick="win()" style="padding:15px 30px; font-size:18px; background:green; color:white; border:none; border-radius:10px;">
+SCRATCH
+</button>
 
 <h2 id="result"></h2>
 
 <script>
 function win(){
   let arr = ["🎁 You Won ₹50", "😢 Better luck next time", "🎉 You Won ₹100"];
-  
-  // Result show karo
-  document.getElementById("result").innerHTML =
-  arr[Math.floor(Math.random()*arr.length)];
 
-  // 2 second baad ad trigger
-  setTimeout(function(){
-    document.body.click();
-  }, 2000);
+  let result = arr[Math.floor(Math.random()*arr.length)];
+  document.getElementById("result").innerHTML = result;
+
+  // 👉 Ad script automatically trigger hoga jab user click karega
 }
 </script>
 
