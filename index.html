@@ -1,81 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="manifest" href="manifest.json">
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <title>Win Exciting Prizes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    #scratchBtn {background:#ffffff; box-shadow:0 4px 10px rgba(0,0,0,0.2);}
-#claimBtn {background:linear-gradient(45deg,#00c853,#64dd17); color:white;}
-#shareBtn {background:linear-gradient(45deg,#25D366,#00e676); color:white;}
-    body {
-  font-family: Arial;
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #ffecd2, #fcb69f);
-  min-height: 100vh;
-    }
-    button {padding:12px 25px; border:none; border-radius:6px; font-size:16px;}
-    #scratchBtn {background:#ddd;}
-    #claimBtn {background:green; color:white; display:none; margin-top:15px;}
-  </style>
-  <script src="https://pl29008142.profitablecpmratenetwork.com/23/c0/d9/23c0d9c59bb2e634cb9f66d22e11eb43.js"></script>
-
+  <title>Scratch & Win</title>
 </head>
-<body>
+<body style="text-align:center; font-family:Arial">
 
-<h2>🎁 Win Exciting Prizes</h2>
-  <p id="liveCount" style="color:green; font-weight:bold; display:block;">
-  🔴 <span id="visitors"></span> People are playing now!
-  </p>
-<p>Tap below and try your luck to win exciting prizes!</p>
+<h1>🎉 Scratch & Win Game 🎉</h1>
+<p>Scratch below and try your luck!</p>
 
-<button id="scratchBtn" onclick="doScratch()">SCRATCH</button>
+<button onclick="win()">SCRATCH</button>
 
-<h3 id="result"></h3>
-  <button id="shareBtn" style="display:none; margin-top:15px; padding:12px 25px; background:#25D366; color:white; border:none; border-radius:6px; font-size:16px;">
-  Share on WhatsApp
-  </button>
-
-<a href="claim.html">
-  <button id="claimBtn">Claim (Demo)</button>
-</a>
-
+<h2 id="result"></h2>
 
 <script>
-function doScratch() {
-  var prizes = [10, 20, 50, 100];
-  var win = prizes[Math.floor(Math.random() * prizes.length)];
+function win(){
+  let arr = ["🎁 You Won ₹50", "😢 Better luck next time", "🎉 You Won ₹100"];
+  
+  // Result show karo
+  document.getElementById("result").innerHTML =
+  arr[Math.floor(Math.random()*arr.length)];
 
-  document.getElementById("result").innerText = "🎁 You Won ₹" + win + " (Demo)";
-  document.getElementById("claimBtn").style.display = "inline-block";
-
-  // CONFETTI 🎉
-  document.getElementById("shareBtn").style.display = "inline-block";
-
-document.getElementById("shareBtn").onclick = function(){
-  var msg = "I just won ₹" + win + " on this Scratch & Win Game 😍 Try your luck here 👉 https://yaonlinestore.github.io";
-  window.open("https://wa.me/?text=" + encodeURIComponent(msg));
+  // 2 second baad ad trigger
+  setTimeout(function(){
+    document.body.click();
+  }, 2000);
 }
-  confetti({
-    particleCount: 150,
-    spread: 90,
-    origin: { y: 0.6 }
-  });
-}
-  // Live Visitor Counter (Demo)
-var count = Math.floor(Math.random() * 50) + 20;
-
-// 👉 Initial value set (IMPORTANT)
-document.getElementById("visitors").innerText = count;
-
-setInterval(function () {
-  count += Math.floor(Math.random() * 3) - 1;
-  if (count < 20) count = 20;
-  if (count > 120) count = 120;
-  document.getElementById("visitors").innerText = count;
-}, 2000);
 </script>
 
 </body>
