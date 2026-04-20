@@ -53,11 +53,12 @@
   <p>Tap below and try your luck!</p>
 
   <button onclick="play()">SCRATCH</button>
+  
+  <h3 id="loading" style="display:none;">⏳ Processing...</h3>.
 
   <div id="result"></div>
   <p style="font-size:12px; color:#777;">*Just for fun 🎮</p>
 </div>
-
 <script>
 function play(){
   let arr = ["🎁 Surprise!", "😢 Try Again", "🎉 Lucky You!"];
@@ -65,6 +66,7 @@ function play(){
 
   document.getElementById("result").innerHTML = result;
 }
+
   window.location.href = "claim.html";
 </script>
 
